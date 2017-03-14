@@ -1,0 +1,35 @@
+@import 'theme.scss';
+@mixin form($bg, $fg, $color) {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: map-get($bg, card);
+  color: map-get($fg, text);
+  padding: 16px;
+  >[fw] {
+    width: 100%;
+    margin: -16px;
+  }
+  md-input-container {
+    margin: 0 8px;
+    label {
+      // color: md-color($color, 0.38);
+      &.md-focused {
+        // color: md-color($color, 0.87)
+      }
+    }
+  }
+}
+.form {
+  @include form(
+    $mat-light-theme-background,
+    $mat-light-theme-foreground,
+    $primary
+  );
+}
+.theme-dark.form,
+.theme-dark .form {
+  @include form(
+    $mat-dark-theme-background,
+    $mat-dark-theme-foreground,
+    $dark-primary
+  );
+}

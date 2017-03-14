@@ -1,0 +1,64 @@
+[flex-full], [fl]  { flex:  1 auto }
+[f], [ff], [flex-box], [force-flex] {
+  display: flex;
+  &[ff], &[force-flex] {
+    display: flex !important;
+  }
+  // > [fi] { display: inline-flex }
+  > [f12] { flex: 12 auto }
+  > [f11] { flex: 11 auto }
+  > [f10] { flex: 10 auto }
+  > [f9]  { flex:  9 auto }
+  > [f8]  { flex:  8 auto }
+  > [f7]  { flex:  7 auto }
+  > [f6]  { flex:  6 auto }
+  > [f5]  { flex:  5 auto }
+  > [f4]  { flex:  4 auto }
+  > [f3]  { flex:  3 auto }
+  > [f2]  { flex:  2 auto }
+  > [f1]  { flex:  1 auto }
+  > [s4] {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  > [s8] {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  > [s16] {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+[fw] {
+  // > [fi] { display: inline-flex }
+  > * {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  > [f12] { width:   100%}
+  > [f11] { width: 91.66%}
+  > [f10] { width: 83.33%}
+  > [f9]  { width:    75%}
+  > [f8]  { width: 66.66%}
+  > [f7]  { width: 63.33%}
+  > [f6]  { width:    50%}
+  > [f5]  { width: 41.66%}
+  > [f4]  { width: 33.33%}
+  > [f3]  { width:    25%}
+  > [f2]  { width: 16.66%}
+  > [f1]  { width:  8.33%}
+  > [s4] {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  > [s8] {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  > [s16] {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}

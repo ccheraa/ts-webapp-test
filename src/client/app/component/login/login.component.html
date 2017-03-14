@@ -1,0 +1,28 @@
+<!--LOGIN-->
+<md-card *ngIf="!token">
+  <md-card-title>Log in:</md-card-title>
+  <md-card-content>
+    <md-input-container>
+      <input mdInput placeholder="Username" [(ngModel)]="form.username" [disabled]="loading">
+    </md-input-container>
+    <md-input-container>
+      <input mdInput type="password" placeholder="Password" [(ngModel)]="form.password" [disabled]="loading">
+    </md-input-container>
+  </md-card-content>
+  <md-card-actions ff>
+    <span f12></span>
+    <button md-button (click)="form.username = form.password = ''" [disabled]="loading">Reset</button>
+    <button md-raised-button color="accent" (click)="login()" [disabled]="loading">Login</button>
+  </md-card-actions>
+</md-card>
+<!--LOGOUT-->
+<md-card *ngIf="!!token">
+  <md-card-title>Logged as:</md-card-title>
+  <md-card-content>
+    <h2>{{user.name}}</h2>
+  </md-card-content>
+  <md-card-actions ff>
+    <span f12></span>
+    <button md-raised-button color="accent" (click)="logout()" [disabled]="loading">Log out</button>
+  </md-card-actions>
+</md-card>

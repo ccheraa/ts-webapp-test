@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./form.scss";
+@import "./theme.scss";
+@import "./viewport.scss";
+@import "./app.scss";
+@import "./message.scss";
+@import "./flex.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  direction: ltr;
+  &.rtl {
+    direction: rtl;
+    md-dialog-container {
+      direction: rtl;
+    }
+  }
+}
+
+.overlay:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  opacity: 0.3;
+  z-index: 9999;
+}
+
+md-dialog-container {
+  > cdk-focus-trap {
+    > .cdk-focus-trap-content {
+      > * {
+        > [is-dialog] {
+          margin:-24px;
+          min-width:320px;
+          // > md-card-content {
+            // margin-left: -24px;
+            // margin-right: -24px;
+          // }
+        }
+      }
+    }
+  }
+}
+
+md-icon[inline] {
+  width: inherit;
+  height: inherit;
+  vertical-align: middle;
+  &[font-size] {
+    font-size: inherit;
+  }
+}

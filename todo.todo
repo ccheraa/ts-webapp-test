@@ -1,0 +1,72 @@
+lbm:
+  clients:
+    ☐ list
+    ☐ add
+    ☐ delete
+    ☐ edit
+  services:
+    ☐ loader: callback => promises?
+github:
+  gulp:
+    ☐ lint
+    ✔ webpack instead of nodemon for server @done (13/03/2017, 20:37:30)
+    ☐ test
+    ☐ coverage
+    ☐ docs
+    ☐ prod build for client
+  engine:
+    ✔ move more things from common/server/client to lib @done (11/03/2017, 14:51:30)
+    ✔ use node packages @done (11/03/2017, 21:37:34)
+    ✔ use namespaces @done (11/03/2017, 20:31:47)
+    ✔ navigator: canDeactivate @done (12/03/2017, 00:01:42)
+    ✔ cli @done (12/03/2017, 00:31:34)
+    ✔ move user RoutUrl to /common @done (12/03/2017, 05:36:32)
+    ✔ move user routing to /back @done (12/03/2017, 05:36:33)
+    ✔ convert js imports to ts imports i.e. express @done (12/03/2017, 20:24:58)
+    ✔ rename RootUrl to DBUrl @done (12/03/2017, 06:22:55)
+  lib:
+  common:
+    ✔ merge classes @done (04/03/2017, 03:35:18)
+    merge db models:
+      ✔ definitions @done (04/03/2017, 03:35:43)
+      ✔ create @done (04/03/2017, 13:11:31)
+      ✔ list @done (04/03/2017, 03:37:34)
+      ✔ count @done (09/03/2017, 07:06:56)
+      ✔ get @done (04/03/2017, 04:05:27)
+      ✔ set @done (04/03/2017, 10:15:05)
+      ✔ update @done (04/03/2017, 10:21:30)
+      ✔ delete @done (04/03/2017, 13:11:30)
+  client:
+    app:
+      ☐ side bars always to variables
+      ☐ first time config
+  server:
+    db models:
+      ✔ better parameters @done (09/03/2017, 22:36:38)
+      ✔ make sure methods on both sides match (server/client) @done (09/03/2017, 22:40:22)
+      ✔ rename parameters to match mongoose's @done (10/03/2017, 06:42:32)
+      ✔ easier import @done (10/03/2017, 06:42:35)
+      ✔ interface with partiial properties @done (10/03/2017, 05:53:33)
+      ✔ use T instead of any @done (10/03/2017, 06:00:45)
+      ✔ rename routes params @done (10/03/2017, 06:14:05)
+      ✘ change T to something better @cancelled (10/03/2017, 06:43:13)
+      ✔ use interfaces instead of types @done (10/03/2017, 08:02:43)
+      ✔ reintegrate the loader @done (10/03/2017, 17:58:57)
+      ☐ parameters TODO
+  cli:
+    ☐ create the project
+    ☐ templates in a separated file
+    ✔ class generator @done (03/03/2017, 23:06:27)
+    ✔ delete class @done (03/03/2017, 23:06:27)
+    ☐ model generator
+    ☐ delete model
+    ✔ component generator @done (04/03/2017, 00:43:03)
+    ✔ delete component @done (04/03/2017, 00:43:03)
+    ☐ route generator
+    ☐ delete route
+    ✔ service generator @done (04/03/2017, 01:09:33)
+    ✔ delete service @done (04/03/2017, 01:09:34)
+    ☐ pipe generator
+    ☐ delete pipe
+    ☐ directive generator
+    ☐ delete directive

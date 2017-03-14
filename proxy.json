@@ -1,0 +1,14 @@
+{
+  "/api": {
+    "target": "http://localhost:8001",
+    "secure": false
+  },
+  "/lib": {
+    "target": "http://localhost:8001",
+    "secure": false
+  },
+  "/res": {
+    "target": "http://localhost:8001",
+    "secure": false
+  }
+}

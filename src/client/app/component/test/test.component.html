@@ -1,0 +1,35 @@
+<input type="text" [(ngModel)]="name">
+<button (click)="deleteByName(name)">Delete By Name</button><br>
+<input type="text" [(ngModel)]="name2">
+<button (click)="updateByName(name, name2)">Update By Name</button><br>
+<input type="text" [(ngModel)]="age">
+<button (click)="deleteByAge(age)">Delete By Age</button><br>
+<input type="text" [(ngModel)]="age2">
+<button (click)="updateByAge(age, age2)">Update By Age</button><br>
+<button (click)="createNew(name, age)">Create New</button><br>
+<button (click)="random(100)">Create random entries</button><br>
+<button (click)="clear()">Clear</button><br>
+<div *ngIf="test">
+  <div>
+    <span>{{pager.current < 0 ? 0 : pager.current * pager.limit + 1}}-{{(pager.current === pager.pagesCount - 1) ? pager.count : (pager.current + 1) * pager.limit}} of {{pager.count}}</span>
+    <button md-icon-button (click)="prev()" [disabled]="pager.current === 0"><md-icon>chevron_left</md-icon></button>
+    <button md-icon-button (click)="next()" [disabled]="pager.current === pager.pagesCount - 1"><md-icon>chevron_right</md-icon></button>
+  </div>
+  <ul *ngIf="test.length">
+    <li *ngFor="let doc of test">
+      <button md-icon-button (click)="edit(doc)">{{doc._id.slice(-2)}}</button>
+      <button md-icon-button color="warn" (click)="deleteById(doc._id)">
+        <md-icon>delete</md-icon>
+      </button>
+      <button md-icon-button (click)="setName(doc._id, name)">
+        <md-icon>font_download</md-icon>
+      </button>
+      <button md-icon-button (click)="setAge(doc._id, age)">
+        <md-icon>looks_one</md-icon>
+      </button>
+      {{doc.name}} ({{doc.age}})
+    </li>
+  </ul>
+  <div>{{test}}</div>
+  <pre>{{test|json}}</pre>
+</div>
